@@ -1,0 +1,61 @@
+#home {
+  background-color: $primary-color;
+  width: 100vw;
+  height: auto;
+}
+#home-content {
+  height: 100%;
+  width: 100%;
+  padding: 112px 270px 0 268px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  color: $secondary-color;
+  @include Responsive(laptop) {
+    padding: 100px 110px 0 110px;
+  }
+  &-left {
+    height: 100%;
+    padding-top: 100px;
+    h1 {
+      span > span {
+        display: inline;
+      }
+    }
+    img {
+      width: 50%;
+      margin: 50px 140px 0 270px;
+      @include Responsive(laptop) {
+        margin: 50px 0 0 270px;
+      }
+    }
+    p {
+      margin: 50px 140px 0 270px;
+      color: #ffffff;
+      opacity: 0.6;
+      @include Responsive(laptop) {
+        width: 55%;
+        margin: 50px 0 0 270px;
+      }
+    }
+  }
+  &-img {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(35%);
+    left: 0;
+    z-index: 1;
+    img {
+      width: auto;
+      margin: 0;
+    }
+  }
+  &-right {
+    height: 100%;
+    img {
+      margin-top: auto;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}

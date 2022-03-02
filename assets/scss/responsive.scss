@@ -1,0 +1,27 @@
+@mixin Responsive($canvas) {
+  @if $canvas == mobileSmall {
+    @media only screen and (max-width: $mobile-small-width) {
+      @content;
+    }
+  } @else if $canvas == mobileBig {
+    @media only screen and (max-width: $mobile-big-width) {
+      @content;
+    }
+  } @else if $canvas == tablet {
+    @media only screen and (max-width: $tablet-width) {
+      @content;
+    }
+  } @else if $canvas == miniLaptop {
+    @media only screen and (max-width: $tablet-small-width) {
+      @content;
+    }
+  } @else if $canvas == laptop {
+    @media only screen and (max-width: $laptop-width) {
+      @content;
+    }
+  } @else if $canvas == pc {
+    @media only screen and (max-width: $pc-monitor) {
+      @content;
+    }
+  }
+}

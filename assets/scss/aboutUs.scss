@@ -1,0 +1,64 @@
+#about-us {
+  background-color: $secondary-color;
+  width: 100vw;
+  height: auto;
+  padding: 250px 270px 150px 268px;
+  @include Responsive(laptop) {
+    padding: 250px 110px 150px 110px;
+  }
+  &-content {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    margin-bottom: 100px;
+    h2 {
+      width: 70%;
+    }
+    p {
+      width: 100%;
+      padding-top: 60px;
+      opacity: 0.7;
+      letter-spacing: 2;
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+  &-img {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    &-left {
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    &-right {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      div {
+        margin-left: auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        img {
+          object-fit: contain;
+        }
+      }
+      // h4 {
+      // }
+    }
+  }
+}
+
+#line-under-about-us {
+  width: 100vw;
+  background-color: $secondary-color;
+
+  padding: 0 100px 0 100px;
+  @include Responsive(laptop) {
+    padding: 0 50px 0 50px;
+  }
+}

@@ -1,0 +1,36 @@
+#designers {
+  width: 100vw;
+  height: auto;
+  background-color: $primary-color;
+  display: flex;
+  padding: 112px 270px 0 268px;
+  @include Responsive(laptop) {
+    padding: 100px 110px 0 110px;
+  }
+  &-content {
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    color: $secondary-color;
+    flex: 1;
+    a {
+      color: $secondary-color;
+      font-family: "Prata" sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 30px;
+    }
+    p {
+      opacity: 0.7;
+    }
+  }
+  &-avatar {
+    img {
+      margin-left: auto;
+    }
+    width: 50%;
+  }
+}

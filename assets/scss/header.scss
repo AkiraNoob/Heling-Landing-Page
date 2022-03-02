@@ -1,0 +1,73 @@
+#header {
+  background-color: $primary-color;
+  width: 100vw;
+  height: auto;
+}
+#header-content {
+  width: 100%;
+  height: auto;
+  padding: 24px 270px 0 268px;
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  background-color: $primary-color;
+  color: $secondary-color;
+  @include Responsive(laptop) {
+    padding: 24px 104px 0 104px;
+  }
+  &-logo {
+    cursor: pointer;
+    justify-self: flex-start;
+    img {
+      color: $secondary-color;
+    }
+  }
+  &-navbar {
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      align-items: center;
+      li {
+        position: relative;
+        cursor: pointer;
+        font-family: "DM Sans", serif;
+        font-size: 18px;
+        a {
+          text-decoration: none !important;
+          color: inherit;
+        }
+      }
+    }
+  }
+  &-contact {
+    justify-self: flex-end;
+    font-family: "Prata", sans-serif;
+    font-size: 24px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+//.....................//
+.navbar-dot {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-200%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: $secondary-color;
+  opacity: 0;
+  z-index: 10;
+}
+.dot-active {
+  opacity: 1;
+}
+.text-notactive {
+  opacity: 0.4;
+}
+.text-active {
+  opacity: 1;
+}
